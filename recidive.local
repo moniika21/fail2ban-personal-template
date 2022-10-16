@@ -1,0 +1,6 @@
+# /etc/fail2ban/jail.d/recidive.local
+[recidive]
+enabled = true
+findtime = 1d
+maxretry = 5
+bantime = -1

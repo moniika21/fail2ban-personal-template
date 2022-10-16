@@ -1,0 +1,6 @@
+# /etc/fail2ban/jail.d/sshd.local
+[sshd]
+enabled = true
+findtime = 1d
+maxretry = 5
+bantime = 7d
