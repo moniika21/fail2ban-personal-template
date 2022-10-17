@@ -4,3 +4,4 @@ enabled = true
 findtime = 1d
 maxretry = 5
 bantime = 1w
+banaction = ufw
