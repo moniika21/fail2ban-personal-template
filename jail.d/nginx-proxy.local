@@ -1,10 +1,11 @@
-# /etc/fail2ban/jail.d/nginx-reverse-proxy.local
-[nginx-reverse-proxy]
+# /etc/fail2ban/jail.d/nginx-proxy.local
+[nginx-proxy]
 enabled = true
+filter = nginx-proxy-filter
 logpath = /data/logs/default-host_access.log
           /data/logs/proxy-host-*_access.log
           /data/logs/proxy-host-*_error.log
 findtime = 1d
 maxretry = 5
 bantime  = 1w
-action = nginx-reverse-proxy
+banaction = ufw
