@@ -2,10 +2,10 @@
 [nginx-proxy]
 enabled = true
 filter = nginx-proxy-filter
-logpath = /data/logs/default-host_access.log
-          /data/logs/proxy-host-*_access.log
-          /data/logs/proxy-host-*_error.log
+logpath = /var/lib/docker/volumes/ng-data/_data/logs/default-host_access.log
+          /var/lib/docker/volumes/ng-data/_data/logs/proxy-host-*_access.log
+          /var/lib/docker/volumes/ng-data/_data/logs/proxy-host-*_error.log
 findtime = 1d
 maxretry = 5
 bantime  = 1w
-banaction = ufw
+banaction = docker-action
