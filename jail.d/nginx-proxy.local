@@ -6,7 +6,7 @@ logpath = /var/lib/docker/volumes/ng-data/_data/logs/default-host_access.log
           /var/lib/docker/volumes/ng-data/_data/logs/proxy-host-*_access.log
           /var/lib/docker/volumes/ng-data/_data/logs/proxy-host-*_error.log
 ignoreip = 192.168.1.0/24
-findtime = 1d
+findtime = 10
 maxretry = 5
 bantime  = 1w
 banaction = docker-action
