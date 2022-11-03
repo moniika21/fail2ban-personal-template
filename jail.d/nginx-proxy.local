@@ -8,5 +8,5 @@ logpath = /var/lib/docker/volumes/ng-data/_data/logs/default-host_access.log
 ignoreip = 192.168.1.0/24
 findtime = 10
 maxretry = 5
-bantime  = 1j
+bantime  = 1d
 banaction = docker-action
