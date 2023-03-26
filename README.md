@@ -13,6 +13,7 @@
 ## General rule attributes
 
 enabled = true
+
 ignoreip = 192.168.1.0/24
 
 It will enable the rule to be effective and ignore all fails made from a local ip address of the standard private network.
