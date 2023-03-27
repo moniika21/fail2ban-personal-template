@@ -5,10 +5,10 @@ filter = npm-badbots-filter
 logpath = /home/moniika/docker/nginxProxyManager/ng-data/logs/default-host_access.log
           /home/moniika/docker/nginxProxyManager/ng-data/logs/proxy-host-*_access.log
 ignoreip = 192.168.1.0/24
-findtime = 10
+findtime = 15m
 maxretry = 1
 bantime  = 1d
 bantime.increment = true
-bantime.rndtime = 2048
+bantime.rndtime = 900
 bantime.factor = 1
 banaction = docker-action
