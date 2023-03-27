@@ -67,3 +67,7 @@ It use a `failregex` to match errors entry in the nginx-proxy-manager log files.
 
 Because docker system doesn't work on the `default` iptable chain and has is **own** chain, the ufw banaction is [ineffective](https://docs.docker.com/network/iptables/#add-iptables-policies-before-dockers-rules).
 To outpass this, I've [searched](https://blog.lrvt.de/fail2ban-with-nginx-proxy-manager/) fo a `docker-action` who use the `DOCKER-USER` chain of iptable to ban properly a malicious ip.
+
+## Acknowledgments
+
+Thanks to [LRVT](https://github.com/l4rm4nd) for his [repository](https://github.com/l4rm4nd/F2BFilters) and his [blog](https://blog.lrvt.de/) with plenty of good advices and knowledge.
