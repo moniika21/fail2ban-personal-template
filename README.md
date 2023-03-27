@@ -12,6 +12,8 @@
 
 ## General rule attributes
 
+<https://github.com/fail2ban/fail2ban/blob/a9b30eb86ea4367e7464c90f517b1e1da9c88020/config/jail.conf>
+
 enabled = true
 
 ignoreip = 192.168.1.0/24
@@ -20,6 +22,18 @@ It will enable the rule to be effective and ignore all fails made from a local i
 
 > **Warning**
 > Your private network is supposed to be secure !
+
+`bantime.increment` allows to use database for searching of previously banned ip's to increase a default ban time.
+
+`bantime.rndtime` is the max number of seconds using for mixing with random time to prevent "clever"
+botnets calculate exact time IP can be unbanned again.
+
+`bantime.factor` is a coefficient to calculate exponent growing of the formula or common multiplier,
+ default value of factor is 1 and with default value of formula, the ban time
+ grows by 1, 2, 4, 8, 16 ...
+
+> **Note**
+> No need to use `recidive` jail with `bantime.increment`.
 
 ## Ssh rule
 
@@ -47,9 +61,9 @@ So the `logpath` variable point to these log files for each service.
 
 ### Nginx proxy filter
 
-It use a `failregex` to match an 404 or 303 error entry in the nginx-proxy-manager log files.
+It use a `failregex` to match errors entry in the nginx-proxy-manager log files.
 
 ### Nginx proxy action
 
 Because docker system doesn't work on the `default` iptable chain and has is **own** chain, the ufw banaction is [ineffective](https://docs.docker.com/network/iptables/#add-iptables-policies-before-dockers-rules).
-To outpass this, I've created a `docker-action` who use the `DOCKER-USER` chain of iptable to ban properly a malicious ip.
+To outpass this, I've [searched](https://blog.lrvt.de/fail2ban-with-nginx-proxy-manager/) fo a `docker-action` who use the `DOCKER-USER` chain of iptable to ban properly a malicious ip.

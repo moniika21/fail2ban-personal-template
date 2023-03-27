@@ -4,5 +4,5 @@ enabled = true
 ignoreip = 192.168.1.0/24
 findtime = 1mon
 maxretry = 4
-bantime = -1
+bantime = 1mon
 banaction = ufw

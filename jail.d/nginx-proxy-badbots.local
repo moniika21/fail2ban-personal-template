@@ -1,12 +1,12 @@
-# /etc/fail2ban/jail.d/nginx-proxy.local
+# /etc/fail2ban/jail.d/nginx-proxy-badbots.local
 [nginx-proxy]
 enabled = true
-filter = nginx-proxy-filter
+filter = npm-general-badbots-filter
 logpath = /var/lib/docker/volumes/ng-data/_data/logs/default-host_access.log
           /var/lib/docker/volumes/ng-data/_data/logs/proxy-host-*_access.log
 ignoreip = 192.168.1.0/24
 findtime = 10
-maxretry = 5
+maxretry = 1
 bantime  = 1d
 bantime.increment = true
 bantime.rndtime = 2048
