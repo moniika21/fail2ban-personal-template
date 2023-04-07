@@ -2,7 +2,7 @@
 [recidive]
 enabled = true
 ignoreip = 192.168.1.0/24
-findtime = 1mon
-maxretry = 4
+findtime = 1d
+maxretry = 5
 bantime = 1mon
 banaction = ufw
