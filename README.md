@@ -10,6 +10,14 @@
 
 - Ban-actions are stored in the `/etc/fail2ban/action.d` folder.
 
+## Activating service
+
+Don't forget to activate the service to avoid not restarting after a reboot
+
+```bash
+sudo systemctl enable fail2ban
+```
+
 ## General rule attributes
 
 <https://github.com/fail2ban/fail2ban/blob/a9b30eb86ea4367e7464c90f517b1e1da9c88020/config/jail.conf>
