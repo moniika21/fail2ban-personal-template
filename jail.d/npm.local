@@ -5,7 +5,7 @@ filter = npm-filter
 logpath = /home/moniika/docker/nginxProxyManager/ng-data/logs/fallback_access.log
           /home/moniika/docker/nginxProxyManager/ng-data/logs/proxy-host-*_access.log
 ignoreip = 192.168.1.0/24
-findtime = 5m
+findtime = 10
 maxretry = 5
 bantime  = 1d
 bantime.increment = true
