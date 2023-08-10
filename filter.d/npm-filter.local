@@ -2,6 +2,6 @@
 
 [Definition]
 
-failregex = ^.* (422|405|404|403|401|\-) (422|405|404|403|401) - .* \[Client <HOST>\] \[Length .*\] .* \[Sent-to <F-CONTAINER>.*</F-CONTAINER>\] <F-USERAGENT>".*"</F-USERAGENT> .*$
+failregex = ^.* (422|405|403|401|\-) (422|405|403|401) - .* \[Client <HOST>\] \[Length .*\] .* \[Sent-to <F-CONTAINER>.*</F-CONTAINER>\] <F-USERAGENT>".*"</F-USERAGENT> .*$
 
 ignoreregex = ^.* (404|\-) (404) - .*".*(\.png|\.txt|\.jpg|\.ico|\.js|\.json|\.css|\.ttf|\.woff|\.woff2|\.org|\.si|\.ics|\.vcf)(/)*?" \[Client <HOST>\] \[Length .*\] ".*" .*$
