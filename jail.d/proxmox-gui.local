@@ -1,7 +1,10 @@
 [proxmox]
 enabled = true
-port = https,http,8006
 filter = proxmox
 logpath = /var/log/daemon.log
+port = https,http,8006
+ignoreip= 127.0.0.1
 maxretry = 5
 bantime = 10m
+bantime.increment = true
+bantime.rndtime = 300
