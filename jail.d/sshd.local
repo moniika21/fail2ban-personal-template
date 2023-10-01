@@ -6,4 +6,4 @@ findtime = 5m
 maxretry = 5
 bantime = 10m
 bantime.increment = true
-bantime.rndtime = 900
+bantime.rndtime = 300
