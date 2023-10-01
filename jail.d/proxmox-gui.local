@@ -1,3 +1,4 @@
+# /etc/fail2ban/jail.d/proxmox-gui.local
 [proxmox]
 enabled = true
 filter = proxmox-gui-filter
