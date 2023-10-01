@@ -38,7 +38,9 @@ botnets calculate exact time IP can be unbanned again.
 
 `bantime.factor` is a coefficient to calculate exponent growing of the formula or common multiplier,
  default value of factor is 1 and with default value of formula, the ban time
- grows by 1, 2, 4, 8, 16 ...
+ grows by 1, 2, 4, 8, 16 ... so it is multiplied by 2 by default
+ 
+ bantime.formula = ban.Time * (1<<(ban.Count if ban.Count<20 else 20)) * banFactor
 
 > **Note**
 > No need to use `recidive` jail with `bantime.increment`.
