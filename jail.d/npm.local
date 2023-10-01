@@ -4,7 +4,7 @@ enabled = true
 filter = npm-filter
 logpath = /home/moniika/docker/nginx-proxy-manager/data/logs/fallback_access.log
           /home/moniika/docker/nginx-proxy-manager/data/logs/proxy-host-*_access.log
-ignoreip = 192.168.1.0/24
+ignoreip = 127.0.0.1
 findtime = 10
 maxretry = 5
 bantime  = 10m
