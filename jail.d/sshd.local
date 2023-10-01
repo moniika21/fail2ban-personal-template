@@ -4,6 +4,6 @@ enabled = true
 ignoreip = 127.0.0.1
 findtime = 5m
 maxretry = 5
-bantime = 1d
+bantime = 10m
 bantime.increment = true
 bantime.rndtime = 900
