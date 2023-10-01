@@ -1,6 +1,6 @@
 [proxmox]
 enabled = true
-filter = proxmox
+filter = proxmox-gui-filter
 logpath = /var/log/daemon.log
 port = https,http,8006
 ignoreip= 127.0.0.1
