@@ -1,6 +1,7 @@
 # /etc/fail2ban/jail.d/sshd.local
 [sshd]
 enabled = true
+backend = systemd # to use systemd for proxmox
 ignoreip = 127.0.0.1
 findtime = 5m
 maxretry = 5
