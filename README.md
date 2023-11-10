@@ -1,5 +1,46 @@
 # Template for fail2ban configuration
+## How to install ?
 
+```sh
+sudo apt install fail2ban -y
+sudo systemctl enable fail2ban.service
+```
+
+- Enable sshd and recidive default jail
+
+```sh
+echo "[sshd]
+enabled = true
+[recidive]
+enabled = true
+" | sudo tee /etc/fail2ban/jail.d/defaults-debian.conf
+```
+
+- Start fail2ban service and jails
+
+```sh
+sudo systemctl start fail2ban.service
+sudo fail2ban-client start sshd
+sudo fail2ban-client start recidive
+```
+
+## Reload conf
+
+```sh
+sudo fail2ban-client reload
+```
+
+## See logs
+
+```sh
+tail -f /var/log/fail2ban.log
+```
+
+## See status
+
+```sh
+sudo fail2ban-client status <name_of_jail>
+```
 ## Components location
 
 **Local** components are suffixed with `local` to not be overrided by [defaults fail2ban components](https://manpages.debian.org/stable/fail2ban/jail.conf.5.en.html#CONFIGURATION_FILES_FORMAT).
